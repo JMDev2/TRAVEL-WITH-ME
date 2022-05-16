@@ -33,12 +33,21 @@ public class Sql2oPlacesDao implements PlacesDao {
 
     @Override
     public List<Places> getAllPlaces() {
-        return null;
+        try(Connection conn = sql2o.open()){
+            String sql = "SELECT * FROM places";
+            return conn.createQuery(sql)
+                    .executeAndFetch(Places.class);
+        }
     }
 
     @Override
     public Places getAllPlacesById(int id) {
-        return null;
+        try(Connection conn = sql2o.open()){
+            String sql = "SELECT * FROM places WHERE id = :id)";
+            return conn.createQuery(sql)
+                    .addParameter("id", id)
+                    .executeAndFetchFirst(Places.class);
+        }
     }
 
     @Override
