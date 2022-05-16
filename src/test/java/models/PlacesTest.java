@@ -22,6 +22,11 @@ public class PlacesTest {
         Places places = new Places("kenya", "kenya", "www.images.com", "nice place");
         assertEquals("www.images.com", places.getImageUrl());
     }
+    @Test
+    public void getName_instantiatesWithDescription_String() {
+        Places places = new Places("kenya", "kenya", "www.images.com", "nice place");
+        assertEquals("nice place", places.getDescription());
+    }
 }
 
 
