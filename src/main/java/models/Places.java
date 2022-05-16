@@ -1,5 +1,7 @@
 package models;
 
+import java.util.Objects;
+
 public class Places {
     private int id;
     private String destination;
@@ -7,8 +9,7 @@ public class Places {
     private String imageUrl;
     private String description;
 
-    public Places(int id, String destination, String location, String imageUrl, String description) {
-        this.id = id;
+    public Places(String destination, String location, String imageUrl, String description) {
         this.destination = destination;
         this.location = location;
         this.imageUrl = imageUrl;
@@ -53,5 +54,22 @@ public class Places {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Places places = (Places) o;
+        return id == places.id &&
+                Objects.equals(destination, places.destination) &&
+                Objects.equals(location, places.location) &&
+                Objects.equals(imageUrl, places.imageUrl) &&
+                Objects.equals(description, places.description);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, destination, location, imageUrl, description);
     }
 }
