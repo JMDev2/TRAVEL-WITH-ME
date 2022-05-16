@@ -7,6 +7,11 @@ public class Places {
     private String imageUrl;
     private String description;
 
-
-
+    public Places(int id, String destination, String location, String imageUrl, String description) {
+        this.id = id;
+        this.destination = destination;
+        this.location = location;
+        this.imageUrl = imageUrl;
+        this.description = description;
+    }
 }
