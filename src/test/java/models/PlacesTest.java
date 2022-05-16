@@ -1,4 +1,4 @@
 package models;
 
-public class Places {
+public class PlacesTest {
 }
