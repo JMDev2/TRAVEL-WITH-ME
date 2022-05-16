@@ -8,6 +8,8 @@ public class Sql2oPlacesDao implements PlacesDao {
     @Override
     public void addPlace(Places places) {
 
+
+
     }
 
     @Override
