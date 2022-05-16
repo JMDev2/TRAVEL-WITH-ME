@@ -1,6 +1,7 @@
 package Dao;
 
 import models.Places;
+import models.Reviews;
 import org.sql2o.Sql2o;
 import org.sql2o.Sql2oException;
 
@@ -49,9 +50,33 @@ public class Sql2oPlacesDao implements PlacesDao {
                     .executeAndFetchFirst(Places.class);
         }
     }
+    //    listing the reviews
+//    @Override
+//    public List<Reviews> getReviewsByPlace(int placeId) {
+//        try(Connection conn = sql2o.open()){
+//            return conn.createQuery("SELECT * FROM reviews WHERE placeid = :placeid")
+//                    .addParameter("placeid", placeId)
+//                    .executeAndFetch(Reviews.class);
+//
+//
+//        }
+//
+//    }
+
+
+
 
     @Override
     public void deletePlaceById(int id) {
+        try(Connection conn = sql2o.open(){
+            String sql = "DELETE FROM places WHERE id = :id";
+            conn.createQuery(sql)
+                    .addParameter("id", id)
+                    .executeUpdate();
+        }catch (Sql2oException ex){
+            System.out.println(ex);
+        }
+
 
     }
 }
