@@ -4,6 +4,7 @@ import Dao.Sql2oPlacesDao;
 
 import org.junit.Rule;
 import org.junit.Test;
+import org.sql2o.Sql2o;
 
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -16,7 +17,7 @@ public class Sql2oPlacesDaoTest {
     @Test
     public void save_insertsObjectIntoDatabase_true() {
         Places places = new Places("kenya","kenya","www.image.com","cool");
-        Sql2oPlacesDao sql2oPlacesDao;
+        Sql2oPlacesDao sql2oPlacesDao = new Sql2oPlacesDao(Sql2o);
         sql2oPlacesDao.addPlace(places);
         assertTrue(sql2oPlacesDao.getAllPlaces().get(0).equals(places));
     }
@@ -27,7 +28,7 @@ public class Sql2oPlacesDaoTest {
         assertEquals("kenya", places.getDestination());
     }
     @Test
-    public void all_returnsAllInstancesOfMonster_true() {
+    public void all_returnsAllInstancesOfPlaces_true() {
         Places places= new Places("kenya","kenya","www.image.com","cool");
         Sql2oPlacesDao sql2oPlacesDao = new Sql2oPlacesDao();
         sql2oPlacesDao.addPlace(places);
