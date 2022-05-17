@@ -22,7 +22,14 @@
     <div class="row justify-content-center ">
         <h3>Destinations</h3>
         <div class="col-sm-5 " >
-
+            <div class="card" style="width: 18rem;">
+                <img src="{{imageUrl}}" class="card-img-top" alt="locationimg">
+                <div class="card-body">
+                    <h3 class="card-title">{{destination}}</h3>
+                    <p class="card-text">{{description}}</p>
+                    <a href="#" class="btn btn-success">Add Review</a>
+                </div>
+            </div>
         </div>
 
     </div>
@@ -30,3 +37,15 @@
 {{/partial}}
 
 {{> layout.hbs}}
+
+
+<div class="card repocards ">
+    <div class="card-body ">
+
+        <h5 class="card-title " appUnderline> reponame: {{repo.name}}</h5>
+        <p class="card-text "> description <br> {{repo.description}} <br><br> Language:{{repo.language}}
+        </p>
+
+        <a href="{{repo.html_url}} " class="btn btn-dark ">view in github</a>
+    </div>
+</div>
