@@ -1,9 +1,11 @@
 # TRAVEL-WITH-ME
 
-# Authors.
+# Author.
 By JosephMaina1995
+
   
 # Demo
+
 
 # Project Description.
 Travel with me is a web application built using java and java-spark framework.This app acts as a journal enabling users to log sites they want to visit, sites or cities visited leaving reviews for tracking.
