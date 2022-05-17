@@ -53,8 +53,7 @@ You may also want to contribute to enhance a functionality:
 # Contributors
 1. JOSEPHMAINA1995
 2. Kemuntogift
-3. VelmaAkoch
-4. 
+3. VelmaAkoch. 
 
 # Technologies Used.
 1. Java Spark. 
