@@ -1,4 +1,4 @@
-package Dao;
+package models;
 
 import models.DB;
 import org.junit.rules.ExternalResource;
