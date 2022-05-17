@@ -11,7 +11,7 @@ public class Reviews {
     private int placeid;
     private Timestamp createdAt;
 
-    public Reviews(String name, int rating, String message, int placeid, Timestamp createdAt) {
+    public Reviews(String name, int rating, String message, int placeid) {
         this.name = name;
         this.rating = rating;
         this.message = message;
