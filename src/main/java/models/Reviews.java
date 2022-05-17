@@ -4,7 +4,7 @@ import java.sql.Timestamp;
 import java.util.Objects;
 
 public class Reviews {
-    private int ad;
+    private int id;
     private String name;
     private int rating;
     private String message;
@@ -19,12 +19,12 @@ public class Reviews {
         this.createdAt = createdAt;
     }
 
-    public int getAd() {
-        return ad;
+    public int getId() {
+        return id;
     }
 
-    public void setAd(int ad) {
-        this.ad = ad;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -72,7 +72,7 @@ public class Reviews {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Reviews reviews = (Reviews) o;
-        return ad == reviews.ad &&
+        return id == reviews.id &&
                 rating == reviews.rating &&
                 placeid == reviews.placeid &&
                 Objects.equals(name, reviews.name) &&
@@ -82,6 +82,6 @@ public class Reviews {
 
     @Override
     public int hashCode() {
-        return Objects.hash(ad, name, rating, message, placeid, createdAt);
+        return Objects.hash(id, name, rating, message, placeid, createdAt);
     }
 }
