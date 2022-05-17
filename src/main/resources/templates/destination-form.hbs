@@ -1,0 +1,49 @@
+{{#partial "content"}}
+    <div id="review" class="card">
+        <img src="/images/dform2.jpeg" class="img-fluid ">
+        <div class="card-img-overlay   d-flex flex-column align-items-center justify-content-center">
+
+            <div class="dform-text form text-center">
+                <div class="row">
+                    <div col-lg-6 col-md-6 col-12>
+                    <p class="text-center lets">Add Your Destination Here</p>
+                    <p>
+                        Tell us all about the destination you travelled to<br>
+                        Add an image link with a photo of the place so others<br>
+                        can see what to expect.<br>
+                        Do not forget to add a brief description of the place as well.
+
+                    </p>
+                    </div>
+
+                    <!--form-->
+                    <div col-lg-6 col-md-6 col-12>
+                        <form action="" method="post">
+                            <div class="mb-3">
+                                <label for = "destinantion" class = "form-label text-color">Your Location</label>
+                                <input type="text" class = "form-control" id="destinantion" name="destinantion">
+                            </div>
+                            <div class="mb-3">
+                                <label for = "location" class = "form-label text-color">Your Location</label>
+                                <input type="text" class = "form-control" id="location" name="location">
+                            </div>
+                            <div class="mb-3">
+                                <label for="imageurl" class="form-label text-color">Rating From 1-5 </label>
+                                <input type="text" class="form-control" id="imageurl" name="imageurl">
+                            </div>
+                            <div class ="mb-3">
+                                <label for="description" class="form-label text-color">Tell us about your experience</label>
+                                <textarea class="form-control" name="description" id="description" rows="3"></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class = "button btn-success">Post Destination</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{{/partial}}
+{{> layout.hbs}}

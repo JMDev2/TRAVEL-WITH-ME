@@ -1,0 +1,34 @@
+{{#partial "content"}}
+    <div id="review" class="card">
+        <img src="/images/reviewform.jpeg" class="img-fluid ">
+        <div class="card-img-overlay   d-flex flex-column align-items-center justify-content-center">
+
+            <div class="review-text form text-center">
+                <form action="" method="post">
+                    <div class="mb-3">
+                        <label for = "reviewer" class="form-label text-color">Tell us your name</label>
+                        <input type="text" class = "form-control" id="reviewer" name="reviewer">
+                    </div>
+                    <input class="d-none" type="number" placeholder="{{placeId}}" id="placeId" name="placeId" value="{{placeId}}">
+                    <div class="mb-3">
+                        <label for = "reviewerLocation" class = "form-label text-color">Your Location</label>
+                        <input type="text" class = "form-control" id="reviewerLocation" name="reviewerLocation">
+                    </div>
+                    <div class="mb-3">
+                        <label for="rating" class="form-label text-color">Rating From 1-5 </label>
+                        <input type="number" class="form-control" id="rating" name="rating">
+                    </div>
+                    <div class ="mb-3">
+                        <label for="reviewerMessage" class="form-label text-color">Tell us about your experience</label>
+                        <textarea class="form-control" name="reviewerMessage" id="reviewerMessage" rows="3"></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class = "button btn-success">Post Review</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+{{/partial}}
+{{> layout.hbs}}
