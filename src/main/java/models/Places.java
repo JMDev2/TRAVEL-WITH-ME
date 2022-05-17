@@ -4,15 +4,15 @@ import java.util.Objects;
 
 public class Places {
     private int id;
-    private String destination;
+    private String destinantion;
     private String location;
-    private String imageUrl;
+    private String imageurl;
     private String description;
 
-    public Places(String destination, String location, String imageUrl, String description) {
-        this.destination = destination;
+    public Places(String destinantion, String location, String imageurl, String description) {
+        this.destinantion = destinantion;
         this.location = location;
-        this.imageUrl = imageUrl;
+        this.imageurl = imageurl;
         this.description = description;
     }
 
@@ -24,12 +24,12 @@ public class Places {
         this.id = id;
     }
 
-    public String getDestination() {
-        return destination;
+    public String getDestinantion() {
+        return destinantion;
     }
 
-    public void setDestination(String destination) {
-        this.destination = destination;
+    public void setDestinantion(String destinantion) {
+        this.destinantion = destinantion;
     }
 
     public String getLocation() {
@@ -40,12 +40,12 @@ public class Places {
         this.location = location;
     }
 
-    public String getImageUrl() {
-        return imageUrl;
+    public String getImageurl() {
+        return imageurl;
     }
 
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
+    public void setImageurl(String imageurl) {
+        this.imageurl = imageurl;
     }
 
     public String getDescription() {
@@ -62,14 +62,14 @@ public class Places {
         if (o == null || getClass() != o.getClass()) return false;
         Places places = (Places) o;
         return id == places.id &&
-                Objects.equals(destination, places.destination) &&
+                Objects.equals(destinantion, places.destinantion) &&
                 Objects.equals(location, places.location) &&
-                Objects.equals(imageUrl, places.imageUrl) &&
+                Objects.equals(imageurl, places.imageurl) &&
                 Objects.equals(description, places.description);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, destination, location, imageUrl, description);
+        return Objects.hash(id, destinantion, location, imageurl, description);
     }
 }

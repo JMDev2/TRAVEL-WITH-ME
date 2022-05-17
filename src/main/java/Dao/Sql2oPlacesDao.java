@@ -17,7 +17,7 @@ public class Sql2oPlacesDao implements PlacesDao {
     @Override
     public void addPlace(Places places) {
         try(Connection conn = sql2o.open()){
-            String sql = "INSERT INTO places (destination, location, imageurl, description) VALUES (:destination, :location, :imageurl, :description)";
+            String sql = "INSERT INTO places (destinantion, location, imageurl, description) VALUES (:destinantion, :location, :imageurl, :description)";
             int id = (int) conn.createQuery(sql,true)
                     .bind(places)
                     .executeUpdate()

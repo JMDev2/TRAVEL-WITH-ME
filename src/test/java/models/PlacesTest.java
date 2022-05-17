@@ -9,7 +9,7 @@ public class PlacesTest {
     @Test
     public void getName_instantiatesWithDestination_String() {
         Places places = new Places("kenya", "kenya", "www.images.com", "nice place");
-        assertEquals("kenya", places.getDestination());
+        assertEquals("kenya", places.getDestinantion());
     }
     @Test
     public void getName_instantiatesWithLocation_String() {
@@ -20,7 +20,7 @@ public class PlacesTest {
     @Test
     public void getName_instantiatesWithImageUrl_String() {
         Places places = new Places("kenya", "kenya", "www.images.com", "nice place");
-        assertEquals("www.images.com", places.getImageUrl());
+        assertEquals("www.images.com", places.getImageurl());
     }
     @Test
     public void getName_instantiatesWithDescription_String() {
