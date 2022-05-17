@@ -1,6 +1,7 @@
 package Dao;
 
 import models.Places;
+import models.Reviews;
 
 import java.util.List;
 
@@ -12,7 +13,7 @@ public interface PlacesDao {
 //    READ
     List<Places> getAllPlaces();
     Places getAllPlacesById(int id);
-//    List<Reviews> getReviewsByPlace(int placeId);
+    List<Reviews> getReviewsByPlace(int placeId);
 
 //    DELETE
     void deletePlaceById(int id);

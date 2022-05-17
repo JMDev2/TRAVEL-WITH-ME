@@ -28,8 +28,6 @@ public class Sql2oPlacesDao implements PlacesDao {
             System.out.println(ex);
         }
 
-
-
     }
 
     @Override
@@ -51,24 +49,24 @@ public class Sql2oPlacesDao implements PlacesDao {
         }
     }
     //    listing the reviews
-//    @Override
-//    public List<Reviews> getReviewsByPlace(int placeId) {
-//        try(Connection conn = sql2o.open()){
-//            return conn.createQuery("SELECT * FROM reviews WHERE placeid = :placeid")
-//                    .addParameter("placeid", placeId)
-//                    .executeAndFetch(Reviews.class);
-//
-//
-//        }
-//
-//    }
+    @Override
+    public List<Reviews> getReviewsByPlace(int placeId) {
+        try(Connection conn = sql2o.open()){
+            return conn.createQuery("SELECT * FROM reviews WHERE placeid = :placeid")
+                    .addParameter("placeid", placeId)
+                    .executeAndFetch(Reviews.class);
+
+
+        }
+
+    }
 
 
 
 
     @Override
     public void deletePlaceById(int id) {
-        try(Connection conn = sql2o.open(){
+        try(Connection conn = sql2o.open()){
             String sql = "DELETE FROM places WHERE id = :id";
             conn.createQuery(sql)
                     .addParameter("id", id)
