@@ -1,7 +1,7 @@
 //package models;
-//
-//import Dao.Sql2oPlacesDao;
-//
+
+import Dao.Sql2oPlacesDao;
+
 //
 //import org.junit.Rule;
 //import org.junit.jupiter.api.Test;
@@ -37,46 +37,6 @@
 //        assertEquals(true, sql2oPlacesDao.getAllPlaces().get(0).equals(sql2oPlacesDao));
 //        assertEquals(true, sql2oPlacesDao.getAllPlaces().get(1).equals(sql2oPlacesDao1));
 //    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
