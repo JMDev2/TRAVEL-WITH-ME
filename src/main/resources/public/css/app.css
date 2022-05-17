@@ -1,36 +1,14 @@
-  header{
-    position: absolute;
-    top: 0px;
-    z-index: 100;
-    width: 100%;
+body {
+  background: lightblue url("/images/lpagealt.jpeg") ;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 
-  }
-  .nav-hr{
-    position: absolute;
-    width: 100%;
-    top: 45px;
-  }
-
-  nav{
-    position: absolute;
-    top: 23px;
-    right: 10%;
-  }
-  nav>ul li{
-    display: inline-block;
-    padding: 10px 30px;
-    font-size: 1em;
+  background-size: cover;
+}
+.showcase-txt{
+    margin: 0 auto;
     color: white;
-    cursor: pointer;
-  }
-  .listbtn{
-     border: none;
-     cursor: pointer;
-     outline: none;
-     padding: 5px;
-     border-radius: 10px;
-     margin-top: 5px;
-      }
-  .destination-section {
-    background-color: rgb(237, 210, 207);
-  }
+}
+.btn{
+    margin-left: 40%;
+}

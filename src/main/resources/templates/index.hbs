@@ -1,42 +1,57 @@
 {{#partial "content"}}
-
-    <div id="hero" class="card">
-        <img src="/images/lpagealt.jpeg" class="img-fluid ">
-        <div class="card-img-overlay   d-flex flex-column align-items-center justify-content-center">
-
-            <div class="hero-text text-center">
-                <h1>Travel-With-Me<br> </h1>
-                <h3>Want to Travel and share your experience?</h3>
-                <h3>Travel-With-Me helps you journal as you explore the world.</h3>
-                <h3>Record destinations you have visited or plan to visit.</h3>
-                <h3>Don't forget to leave reviews and ratings at the end of your stay<br> Bon Voyage!</h3>
-
-
-                <button class="hero-btn listbtn btn-success">Add Destination</button>
-                <p><a class="btn btn-outline-primary" href="/destination-form/new">+ Add Endangered animal</a></p>
+    <div class="showcase d-md-flex pt-5 align-items-center">
+        <div class="showcase-txt align-self-center">
+            <h1 class="showcase-txt-lead text-center fs-1">Where the Journey Begins</h1>
+            <h3 class="showcase-text-follow text-center .fs-3 fw-bold text-light">
+                Plan and book your perfect trip with expert advice,<br> travel tips,
+                destination information and inspiration from us.<br />
+                We haven't been everywhere but it's on our List!
+            </h3>
+            <p class="showcase-text-follow text-center .fs-3 fw-bold ">
+                Get started by sharing your experience on your last vacation
+            </p>
+            <div class="pt-5">
+                <p><a class="btn btn-outline-primary text-center" href="/destination-form/new">+ Add Endangered animal</a></p>
+                <p><a class="btn btn-outline-primary text-center" href="/review-form/new">+ Add Endangered animal</a></p>
             </div>
+        </div>
+        <div class="showcase-image">
+            <img src="/img/showcase.png" alt="" />
         </div>
     </div>
 
-    <!--Destination Section-->
-    <div class="destination-section">
-    <div class="row justify-content-center ">
-        <h3>Destinations</h3>
-    {{#each places}}
-        <div class="col-sm-5 " >
-            <div class="card" style="width: 18rem;">
-                <img src="{{imageurl}}" class="card-img-top" alt="locationimg">
-                <div class="card-body">
-                    <h3 class="card-title">{{destinantion}}</h3>
-                    <h6><i class="fa-solid fa-location-dot"></i> {{location}}</h6>
-                    <p class="card-text">{{description}}</p>
-                    <a href="#" class="listbtn btn-success">Add Review</a>
-                </div>
-            </div>
+    <div class="start">
+        <p class="text-center start-text pt-5">Start Exploring</p>
+
+
+
+        <div class="place-cards rowa">
+            {{#each places}}
+                <a href="places/{{id}}">
+                    <div class="w3-container column">
+                        <div class="w3-card-4" style="width: 70%">
+                            <header class="w3-container w3-light-grey">
+                                <h3><img
+                                        src="{{imageurl}}" height="100px" width="100px"
+                                        alt="Avatar"
+                                        class="w3-left w3-circle w3-margin-right"
+                                />{{location}}</h3>
+                                <p class="text-muted"><i class="fa fa-map-marker" aria-hidden="true"></i> {{placeLocation}}</p>
+                            </header>
+                            <div class="w3-container">
+                                <p>
+                                    {{description}}
+                                </p>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </a>
+            {{/each}}
         </div>
-    {{/each}}
+
     </div>
-    </div>
+
 {{/partial}}
-
-{{> layout.hbs}}
+{{> "layout.hbs"}}

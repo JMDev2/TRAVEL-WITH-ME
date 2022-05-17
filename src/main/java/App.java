@@ -38,7 +38,19 @@ public class App {
             response.redirect("/");
             return null;
         }, new HandlebarsTemplateEngine());
+
+
+
+//        reviews
+        get("/review-form/new", (request, response) -> {
+            Map<String, Object> model = new HashMap<String, Object>();
+//            String heroName = request.queryParams("name");
+            return new ModelAndView(model, "review-form.hbs");
+        }, new HandlebarsTemplateEngine());
     }
+
+
+
 
 
 
