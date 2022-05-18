@@ -26,29 +26,30 @@
 
 
         <div class="place-cards rowa">
-            {{#each places}}
-                <a href="places/{{id}}">
+
+
                     <div class="w3-container column">
                         <div class="w3-card-4" style="width: 70%">
                             <header class="w3-container w3-light-grey">
                                 <h3><img
-                                        src="{{imageurl}}" height="100px" width="100px"
+                                        src="{{place.imageurl}}" height="100px" width="100px"
                                         alt="Avatar"
                                         class="w3-left w3-circle w3-margin-right"
-                                />{{location}}</h3>
-                                <p class="text-muted"><i class="fa fa-map-marker" aria-hidden="true"></i> {{placeLocation}}</p>
+                                />{{place.location}}</h3>
+                                <p class="text-muted"><i class="fa fa-map-marker" aria-hidden="true"></i> {{place.location}}</p>
                             </header>
                             <div class="w3-container">
                                 <p>
-                                    {{description}}
+                                    {{place.description}}
                                 </p>
+                                <a href='/review-form'> Add a Review </a>
 
                             </div>
 
                         </div>
                     </div>
-                </a>
-            {{/each}}
+
+
         </div>
 
     </div>
