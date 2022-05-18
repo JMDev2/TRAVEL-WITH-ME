@@ -63,7 +63,8 @@ You may also want to contribute to enhance a functionality:
 3. CSS.
 4. Gradle. 
 5. Maven.
-6. SQL.
+6. PostgresSQL.
+7. Handlebars.
 
 # LiveLink.
 
