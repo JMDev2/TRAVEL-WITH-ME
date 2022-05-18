@@ -28,6 +28,22 @@
             <a href="/review/{{ selectedDestinantion.id}}/new" class="button mb-4">Add Review</a>
         </div>
     </div>
+        <!--Review cards-->
+        <div class="row justify-content-center reviewcards ">
+            <h3>Repositories</h3>
+            <div class="col-sm-5 " >
+                <div class="card revcards ">
+                    <div class="card-body ">
+
+                        <p>{{name}}</p>
+                        <p>Rating: {{rating}}</p>
+                        <p>posted at {{createdAt}}</p>
+                        <p class="card-text">{{message}}</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
 {{/partial}}
 {{> layout.hbs}}
