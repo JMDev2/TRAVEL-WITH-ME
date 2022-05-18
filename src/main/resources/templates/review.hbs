@@ -1,0 +1,27 @@
+{{#partial "content"}}
+    <div class="revdetails">
+    <div id="review-details" class="row">
+        <div class="col-lg-6 col-md-6 col-12">
+        <div class="card mb-3" style="width: 100%">
+            <div class="row g-0">
+                <div class="col-md">
+                    <img src="{{selectedDestinantion.imageurl}}" class="img-fluid" />
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h1 class="card-title burj">{{selectedDestinantion.destination }}</h1>
+
+                        <p class="card-text">
+                        <p class="text-muted"
+                        ><i class="fa fa-map-marker" aria-hidden="true"></i>
+                            {{ selectedDestinantion.location }}</p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+{{/partial}}
+{{> layout.hbs}}
