@@ -32,30 +32,45 @@
         <div class="d-flex flex-column">
 
             {{#each review}}
-                <div class="reviewer col-md-4">
-                    <div class="card text-center">
-                        <div class="card-header">
-                            <div class="avatar-info"> <p><img src="https://i.pravatar.cc/100" alt="" style="width: 100px; height: 100px"></p></div>
+                <div class="card" style="width: 18rem;">
+                    <img src="https://i.pravatar.cc/100"  class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Name: {{name}}</h5>
+                        <p class="card-text">Rating: {{rating}}</p>
+                        <p class="card-text"><i class="fa fa-map-marker" aria-hidden="true"></i> {{location}}</p>
+                        <p>Place Id {{placeid}}</p>
+                        <p class="card-text">posted at {{createdAt}}</p>
 
-                            <div>
-                                <p>Name: {{name}}</p>
-                                <p>Rating: {{rating}}</p>
-                                <i class="fa fa-map-marker" aria-hidden="true"></i> {{location}}
-                                <p>Place Id {{placeid}}</p>
-                                <p>posted at {{createdAt}}</p>
-                            </div>
-
-                        </div>
-
-                        <div class="card-body">
-                            <p class="card-text">{{message}}</p>
-
-                        </div>
-
+                        <p class="card-text">{{message}}</p>
+                        <a href='/review-form'> Add a Review </a>
                     </div>
-                    <br>
-                    <br>
                 </div>
+
+
+<!--                <div class="reviewer col-md-4">-->
+<!--                    <div class="card text-center">-->
+<!--                        <div class="card-header">-->
+<!--                            <div class="avatar-info"> <p><img src="https://i.pravatar.cc/100" alt="" style="width: 100px; height: 100px"></p></div>-->
+
+<!--                            <div>-->
+<!--                                <p>Name: {{name}}</p>-->
+<!--                                <p>Rating: {{rating}}</p>-->
+<!--                                <i class="fa fa-map-marker" aria-hidden="true"></i> {{location}}-->
+<!--                                <p>Place Id {{placeid}}</p>-->
+<!--                                <p>posted at {{createdAt}}</p>-->
+<!--                            </div>-->
+
+<!--                        </div>-->
+
+<!--                        <div class="card-body">-->
+<!--                            <p class="card-text">{{message}}</p>-->
+
+<!--                        </div>-->
+
+<!--                    </div>-->
+<!--                    <br>-->
+<!--                    <br>-->
+<!--                </div>-->
                 {{/each}}
 
 
