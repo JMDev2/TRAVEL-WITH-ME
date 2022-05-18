@@ -7,6 +7,7 @@ import spark.ModelAndView;
 import spark.template.handlebars.HandlebarsTemplateEngine;
 
 import java.security.Timestamp;
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
@@ -90,7 +91,7 @@ public class App {
             int placeid = Integer.parseInt(request.queryParams("placeid"));
             System.out.println(placeid);
             SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
-//            String  timeAtm = formatter.format(new Timestamp(new Date().getTime()));
+//            String  timeAtm = formatter.format(DateFormat.getDateInstance());
             Reviews reviews = new Reviews(name, rating, message, placeid);
             Sql2oReviewsDao sql2oReviewsDao = new Sql2oReviewsDao(DB.sql2o);
             sql2oReviewsDao.addReview(reviews);

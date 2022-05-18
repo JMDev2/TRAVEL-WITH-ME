@@ -1,5 +1,5 @@
 {{#partial "content"}}
-    <div class="showcase d-md-flex pt-5 align-items-center">
+    <div class="showcase d-md-flex pt-5 align-items-center body">
         <div class="showcase-txt align-self-center">
             <h1 class="showcase-txt-lead text-center fs-1">Where the Journey Begins</h1>
             <h3 class="showcase-text-follow text-center .fs-3 fw-bold text-light">
@@ -19,6 +19,8 @@
         </div>
     </div>
 
+
+
     <div class="start">
         <p class="text-center start-text pt-5">Start Exploring</p>
 
@@ -28,26 +30,34 @@
 
             {{#each places}}
 
-                <div class="w3-container column">
-                    <div class="w3-card-4" style="width: 70%">
-                        <header class="w3-container w3-light-grey">
-                            <h3><img
-                                    src="{{imageurl}}" height="100px" width="100px"
-                                    alt="Avatar"
-                                    class="w3-left w3-circle w3-margin-right"
-                            />{{destinantion}}</h3>
-                            <p class="text-muted"><i class="fa fa-map-marker" aria-hidden="true"></i> {{location}}</p>
-                        </header>
-                        <div class="w3-container">
-                            <p>
-                                {{description}}
-                            </p>
-                            <a href='/review-form'> Add a Review </a>
-
-                        </div>
-
+                <div class="card  display" style="width: 18rem;">
+                    <img src="{{imageurl}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{destinantion}}</h5>
+                        <p class="card-text"><i class="fa fa-map-marker" aria-hidden="true"></i> {{location}}</p>
+                        <p>{{description}}</p>
+                        <a href='/review-form'> Add a Review </a>
                     </div>
                 </div>
+
+<!--                <div class="w3-container column">-->
+<!--                    <div class="w3-card-4" style="width: 70%">-->
+<!--                        <p class="w3-container w3-light-grey">-->
+<!--                            <p></p><img src="{{imageurl}}" height="100px" width="100px" alt="Avatar" class="w3-left w3-circle w3-margin-right"></p>-->
+<!--                            <h3>{{destinantion}}</h3>-->
+<!--                            <p class="text-muted"><i class="fa fa-map-marker" aria-hidden="true"></i> {{location}}</p>-->
+<!--                            <p>{{description}}</p>-->
+<!--                               <a href='/review-form'> Add a Review </a>-->
+
+<!--                        </header>-->
+<!--                        <div class="w3-container">-->
+
+
+
+<!--                        </div>-->
+
+<!--                    </div>-->
+<!--                </div>-->
 
             {{/each}}
 
