@@ -11,8 +11,7 @@
                 Get started by sharing your experience on your last vacation
             </p>
             <div class="pt-5">
-                <p><a class="btn btn-outline-primary text-center" href="/destination-form/new">+ Add Endangered animal</a></p>
-                <p><a class="btn btn-outline-primary text-center" href="/review-form/new">+ Add Endangered animal</a></p>
+                <p><a class="btn btn-outline-primary text-center" href="/destination-form/new">+ Add Destination</a></p>
             </div>
         </div>
         <div class="showcase-image">
@@ -27,27 +26,32 @@
 
         <div class="place-cards rowa">
 
+            {{#each places}}
 
-                    <div class="w3-container column">
-                        <div class="w3-card-4" style="width: 70%">
-                            <header class="w3-container w3-light-grey">
-                                <h3><img
-                                        src="{{place.imageurl}}" height="100px" width="100px"
-                                        alt="Avatar"
-                                        class="w3-left w3-circle w3-margin-right"
-                                />{{place.location}}</h3>
-                                <p class="text-muted"><i class="fa fa-map-marker" aria-hidden="true"></i> {{place.location}}</p>
-                            </header>
-                            <div class="w3-container">
-                                <p>
-                                    {{place.description}}
-                                </p>
-                                <a href='/review-form'> Add a Review </a>
-
-                            </div>
+                <div class="w3-container column">
+                    <div class="w3-card-4" style="width: 70%">
+                        <header class="w3-container w3-light-grey">
+                            <h3><img
+                                    src="{{imageurl}}" height="100px" width="100px"
+                                    alt="Avatar"
+                                    class="w3-left w3-circle w3-margin-right"
+                            />{{destinantion}}</h3>
+                            <p class="text-muted"><i class="fa fa-map-marker" aria-hidden="true"></i> {{location}}</p>
+                        </header>
+                        <div class="w3-container">
+                            <p>
+                                {{description}}
+                            </p>
+                            <a href='/review-form'> Add a Review </a>
 
                         </div>
+
                     </div>
+                </div>
+
+            {{/each}}
+
+
 
 
         </div>

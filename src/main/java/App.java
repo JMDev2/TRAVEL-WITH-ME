@@ -23,6 +23,14 @@ public class App {
 //        sql2oReviewsDao.addReview(reviews);
 //        System.out.println(sql2oReviewsDao.getAllReviews());
 
+//        Places places = new Places("uganda", "kampala", "www.imgaes.com", "cool");
+//        Sql2oPlacesDao sql2oPlacesDao = new Sql2oPlacesDao(DB.sql2o);
+//        sql2oPlacesDao.addPlace(places);
+//        System.out.println("INSERTED");
+//    }
+//}
+
+
 //        index page
 
         get("/", (request, response) -> {
@@ -48,8 +56,11 @@ public class App {
             Places places = new Places(destinantion, location, imageurl, description);
             Sql2oPlacesDao sql2oPlacesDao = new Sql2oPlacesDao(DB.sql2o);
             sql2oPlacesDao.addPlace(places);
-            response.redirect("/");
-            return null;
+            List<Places> getAllPlaces = sql2oPlacesDao.getAllPlaces();
+            model.put("places", getAllPlaces);
+            return new ModelAndView(model, "index.hbs");
+
+//            response.redirect("/");
         }, new HandlebarsTemplateEngine());
 
 //        display all places
@@ -62,9 +73,8 @@ public class App {
         }, new HandlebarsTemplateEngine());
 
 
-
 //        reviews
-         get("/review-form", (request, response) -> {
+        get("/review-form", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
 //            String heroName = request.queryParams("name");
             return new ModelAndView(model, "review-form.hbs");
@@ -103,6 +113,7 @@ public class App {
 
 
     }
-
-
 }
+
+
+

@@ -38,10 +38,10 @@
                             <div class="avatar-info"> <p><img src="https://i.pravatar.cc/100" alt="" style="width: 100px; height: 100px"></p></div>
 
                             <div>
-                                <p>{{name}}</p>
+                                <p>Name: {{name}}</p>
                                 <p>Rating: {{rating}}</p>
                                 <i class="fa fa-map-marker" aria-hidden="true"></i> {{location}}
-                                <p>posted at {{placeid}}</p>
+                                <p>Place Id {{placeid}}</p>
                                 <p>posted at {{createdAt}}</p>
                             </div>
 
@@ -56,7 +56,8 @@
                     <br>
                     <br>
                 </div>
-            {{/each}}
+                {{/each}}
+
 
         </div>
 
@@ -64,5 +65,4 @@
 
 
 {{/partial}}
-
 {{> layout.hbs}}
