@@ -1,59 +1,58 @@
-{{#block "header"}}
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="/css/app.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-        <title>TRAVEL-WITH-ME</title>
-    </head>
-    <body>
+
     {{#block "header"}}
+
+        <!DOCTYPE html>
         <!DOCTYPE html>
         <html lang="en">
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <meta http-equiv="X-UA-Compatible" content="ie=edge">
-            <script src="https://kit.fontawesome.com/a7c6274614.js" crossorigin="anonymous"></script>
+            <link
+                    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+                    crossorigin="anonymous"
+            />
+            <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+            <link
+                    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+                    rel="stylesheet"
+            />
             <link rel="stylesheet" href="/css/app.css">
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
             <title>TRAVEL-WITH-ME</title>
         </head>
         <body>
-        <header>
-            <hr class="nav-hr">
-            <a href="/"><img src=""></a>
-            <nav>
-                <ul>
-                    <a href="/"><li>Home</li></a>
-                    <a href="/"><li>Reviews</li></a>
-                    <a href="/"><li>Destinations</li></a>
-                </ul>
-            </nav>
-        </header>
-{{/block}}
-
-    {{#block "content"}}
-
     {{/block}}
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="/index">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/sightingdetails/new">View Sighting</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/allanimals/new">View All Animals</a>
+            </li>
+        </ul>
+        </div>
+    </nav>
 
+    <!-- begin inner template-->
+    <div class="container">
+        {{#block "content"}}
+
+        {{/block}}
+
+    </div>
+    <!-- end inner template-->
     {{#block "footer"}}
 
         </body>
         </html>
     {{/block}}
-
-{{/block}}
-
-{{#block "content"}}
-
-{{/block}}
-
-{{#block "footer"}}
-
-    </body>
-    </html>
-{{/block}}
