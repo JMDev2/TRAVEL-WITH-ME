@@ -1,8 +1,10 @@
-body {
+body{
+    background-color: lightblue;
+}
+.body {
   background: lightblue url("/images/lpagealt.jpeg") ;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-
+  height: 100vh;
   background-size: cover;
 }
 .showcase-txt{
@@ -20,10 +22,24 @@ body {
         width: 47%;
         display: flex;
         flex-direction: column;
-        background-color: transparent;
         padding: 20px;
         float: right;
         margin-right: 70px;
 
         margin-top: 20px;
 }
+.reviews{
+    border: ;
+            box-sizing: border-box;
+            border-radius: 3px;
+
+
+            display: flex;
+
+            padding: 20px;
+            float: right;
+            margin-right: 70px;
+
+            margin-top: 20px;
+}
+
