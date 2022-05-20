@@ -3,38 +3,35 @@
 
     <div class="card mb-3" style="width: 100%">
         <div class="row g-0">
+            <h1 class="text-center">View The Reviews for Your preffered Destinantion</h1>
             <div class="col-md">
-<!--                <img src="{{imageurl}}" class="img-fluid" />-->
-<!--            </div>-->
-<!--            <div class="col-md-8">-->
-<!--                <div class="card-body">-->
-<!--                    <h1 class="card-title burj">{{name }}</h1>-->
 
-<!--                    <p class="card-text">-->
-<!--                    <p class="text-muted"-->
-<!--                    ><i class="fa fa-map-marker" aria-hidden="true"></i>-->
-<!--                        {{ location }}</p-->
-                    >
+                <img src="{{imageurl}}" class="img-fluid"/>
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                   <h1 class="card-title burj">{{name }}</h1>
+
+                    <p class="card-text">
+                    <p class="text-muted">
+                    <i class="fa fa-map-marker align-center" aria-hidden="true" ></i>
+                        {{ location }}</p>
+
+
                     </p>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="review-content">
-        <div class="Description col-md-3">
-            <p class="comp-description"><h1>About Destination</h1></p>
-            <p>{{ description }}
-            </p>
-            <a href="/review/{{ review.id}}/new" class="button mb-4">Add Review</a>
-        </div>
+
 
         <div class="">
 
             {{#each review}}
 
 
-                <div class="reviews d-flex">
+                <div class="reviews">
                 <div class="card" style="width: 18rem;">
                     <img src="https://i.pravatar.cc/100 {{imagurl}}"  class="card-img-top" alt="...">
                     <div class="card-body">

@@ -10,7 +10,8 @@ public interface ReviewsDao {
 
 //    Read
     List<Reviews> getAllReviews();
-    Reviews getReviewsById(int id);
+    Reviews findReviewsById(int id);
+    List<Reviews> getAllIndividualReviewsByReviews(int reviewId);
 
 //    update
 

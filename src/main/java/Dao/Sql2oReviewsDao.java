@@ -38,15 +38,26 @@ public class Sql2oReviewsDao implements ReviewsDao {
     }
 
     @Override
-    public Reviews getReviewsById(int id) {
-        try(Connection conn = sql2o.open()){
-            String sql = "SELECT * FROM reviews WHERE id = :id";
-            return  conn.createQuery(sql)
+    public Reviews findReviewsById(int id) {
+        try (Connection conn = sql2o.open()) {
+            String sql = "SELECT * FROM reviews WHERE id =:id";
+            return conn.createQuery(sql)
                     .addParameter("id", id)
                     .executeAndFetchFirst(Reviews.class);
+        }
+    }
+
+    @Override
+    public List<Reviews> getAllIndividualReviewsByReviews(int reviewId) {
+        try(Connection conn = sql2o.open()){
+            String sql = "SELECT * FROM reviews WHERE placeid = :reviewid";
+            return conn.createQuery(sql)
+                    .addParameter("reviewid", reviewId)
+                    .executeAndFetch(Reviews.class);
 
         }
     }
+
 
     @Override
     public void deleteReviewById(int id) {

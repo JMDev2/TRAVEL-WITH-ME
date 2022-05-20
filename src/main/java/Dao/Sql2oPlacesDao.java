@@ -42,7 +42,7 @@ public class Sql2oPlacesDao implements PlacesDao {
     @Override
     public Places getAllPlacesById(int id) {
         try(Connection conn = sql2o.open()){
-            String sql = "SELECT * FROM places WHERE id = :id)";
+            String sql = "SELECT * FROM places WHERE id = :id";
             return conn.createQuery(sql)
                     .addParameter("id", id)
                     .executeAndFetchFirst(Places.class);

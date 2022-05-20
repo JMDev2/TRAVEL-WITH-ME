@@ -19,6 +19,13 @@ public class Reviews {
         this.createdAt = createdAt;
     }
 
+    public Reviews(String name, int rating, String message, Timestamp createdAt) {
+        this.name = name;
+        this.rating = rating;
+        this.message = message;
+        this.createdAt = createdAt;
+    }
+
     public int getId() {
         return id;
     }
