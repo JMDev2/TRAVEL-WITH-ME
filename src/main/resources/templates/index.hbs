@@ -31,16 +31,34 @@
 
             {{#each places}}
 
-                <div class="card  display" style="width: 18rem;">
-                    <img src="{{imageurl}}" class="card-img-top" alt="...">
-                    <button class="card-body">
-                        <h5 class="card-title">{{destinantion}}</h5>
-                        <p class="card-text"><i class="fa fa-map-marker" aria-hidden="true"></i> {{location}}</p>
-                        <p>{{description}}</p>
-                        <a href='/review-form/{{id}}'> Add a Review </a> <br>
-                        <a href='/place/{{id}}'> All the Reviews </a>
-                    </button>
+                <div class="forReviews">
+                    <div class="card1" style="width: 18rem;">
+                        <img src="{{imageurl}}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                             <h5 class="card-title">{{destinantion}}</h5>
+                             <p class="card-text"><i class="fa fa-map-marker" aria-hidden="true"></i> {{location}}</p>
+                              <p>{{description}}</p>
+                              <a href='/review-form/{{id}}'> Add a Review </a> <br>
+                             <a href='/place/{{id}}'> All the Reviews </a>
+                            <button class="btn btn-success"> <a href='/place/{{id}}'>All the Reviews</a></button>
+                        </div>
+                    </div>
                 </div>
+
+                </div>
+
+
+
+<!--                <div class="card  display" style="width: 18rem;">-->
+<!--                    <img src="{{imageurl}}" class="card-img-top" alt="...">-->
+<!--                    <button class="card-body">-->
+<!--                        <h5 class="card-title">{{destinantion}}</h5>-->
+<!--                        <p class="card-text"><i class="fa fa-map-marker" aria-hidden="true"></i> {{location}}</p>-->
+<!--                        <p>{{description}}</p>-->
+<!--                        <a href='/review-form/{{id}}'> Add a Review </a> <br>-->
+<!--                        <a href='/place/{{id}}'> All the Reviews </a>-->
+<!--                    </button>-->
+<!--                </div>-->
 
 
             {{/each}}

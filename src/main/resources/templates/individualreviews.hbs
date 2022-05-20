@@ -1,20 +1,23 @@
 {{#partial "content"}}
 
+
     <div class="myReviews">
-    <div class="card mb-3 bodybody" style="width: 100%">
-        <p class="row g-0">
+        <div class="card mb-3 bodybody" style="width: 100%">
 
-        <h3 class="font-weight-bold text-center"><u>View All the Reviews.</u></h3>
-            <p class="card-title burj text-center"><span class="font" >{{place.destinantion}}</span><i class="fa fa-map-marker text-center" aria-hidden="true"></i>
-                {{place.location }}</p>
-            <p class="col-md">
-                <p class="text-center"></p><img src="{{place.imageurl}}" /></p>
+        </div>
+        <p class="col-md-8">
 
-            </div>
-            <div class="col-md-8">
-                <div class="card-body">
-                </div>
-            </div>
+            <p class="text-center"></p><img src="{{place.imageurl}}"/></p>
+        <div class="hd">
+            <p> View All the Reviews.</p>
+            <p><class="card-text"><i class="fa fa-map-marker" aria-hidden="true"></i> {{location}}{{place.destinantion}}</p>
+        </div
+
+
+
+        <div class="card-body">
+        </div>
+
         </div>
     </div>
 
@@ -22,23 +25,55 @@
 
 
     </p>
-<!--      -->
-    {{#each places}}
+    <div class="each">
+        {{#each review}}
 
-            <div class="card  reviews" style="width: 18rem;">
-                <img src="{{place.imageurl}}"alt="...">
-                <button class="card-body">
-                    <h5 class="card-title">Name: {{name}}</h5>
-                    <p class="card-text">Rating: {{rating}}</p>
-                    <p class="card-text"><i class="fa fa-map-marker" aria-hidden="true"></i> {{location}}</p>
-                    <p>Place Id {{placeid}}</p>
-                    <p class="card-text">posted at {{createdAt}}</p>
-                    <p class="card-text">{{message}}</p>
 
+            <div class="reviews">
+                <div class="card2" style="width: 18rem;">
+                    <img src="{{place.imageurl}}"  class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Name: {{name}}</h5>
+                        <p class="card-text">Rating: {{rating}}</p>
+                        <p class="card-text"><i class="fa fa-map-marker" aria-hidden="true"></i> {{location}}</p>
+                        <p>Place Id {{placeid}}</p>
+                        <p class="card-text">posted at {{createdAt}}</p>
+
+                        <p class="card-text">{{message}}</p>
+                        <a href='/review-form'> Add a Review </a>
+                    </div>
+                </div>
             </div>
 
-    {{/each}}
+
+            <!--                <div class="reviewer col-md-4">-->
+            <!--                    <div class="card text-center">-->
+            <!--                        <div class="card-header">-->
+            <!--                            <div class="avatar-info"> <p><img src="https://i.pravatar.cc/100" alt="" style="width: 100px; height: 100px"></p></div>-->
+
+            <!--                            <div>-->
+            <!--                                <p>Name: {{name}}</p>-->
+            <!--                                <p>Rating: {{rating}}</p>-->
+            <!--                                <i class="fa fa-map-marker" aria-hidden="true"></i> {{location}}-->
+            <!--                                <p>Place Id {{placeid}}</p>-->
+            <!--                                <p>posted at {{createdAt}}</p>-->
+            <!--                            </div>-->
+
+            <!--                        </div>-->
+
+            <!--                        <div class="card-body">-->
+            <!--                            <p class="card-text">{{message}}</p>-->
+
+            <!--                        </div>-->
+
+            <!--                    </div>-->
+            <!--                    <br>-->
+            <!--                    <br>-->
+            <!--                </div>-->
+        {{/each}}
+
     </div>
+
 
 
 
